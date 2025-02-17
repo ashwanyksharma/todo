@@ -1,219 +1,235 @@
-/* .bn632-hover {
-    width:75px;
-    font-size: 16px;
-    font-weight: 600;
-    color: #fff;
-    cursor: pointer;
-    margin: 20px;
-    height: 28px;
-    text-align:center;
-    border: none;
-    background-size: 300% 100%;
-    border-radius: 50px;
-    moz-transitiaon: all .4s ease-in-out;
-    -o-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
-  }
-  
-  .bn632-hover:hover {
-    background-position: 100% 0;
-    moz-transition: all .4s ease-in-out;
-    -o-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
-  }
-  
-  .bn632-hover:focus {
-    outline: none;
-  }
-  
-  .bn632-hover.bn25 {
-    background-image: linear-gradient(
-      to right,
-      #29323c,
-      #485563,
-      #2b5876,
-      #4e4376
-    );
-    box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
-  } */
-*{
-    margin: 0px;
-    padding: 0px;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
-
-  .navbar{
-    list-style: none;
-    display: flex;
-    background-color: #333;
-    text-align: center;
-    justify-content: space-around;
-    padding: 10px;
-    border-bottom: 1px solid;
-}
-.navbar a{
-    color: orange;
-    margin: 0 15px;
-    text-decoration: none;
-    transition: transform 0.8s;
-}
-body{
-    background-color: #333;
+body {
+  background-color: #333;
+  overflow-x: hidden;
 }
 
-.navbar a:hover{
-    text-decoration: underline;
-    transform: scale(1.5);
-    
+.navbar {
+  list-style: none;
+  display: flex;
+  background-color: #333;
+  text-align: center;
+  justify-content: space-around;
+  padding: 10px;
+  border-bottom: 1px solid;
 }
 
-.text1{
-    margin: 200px;
-    width: fit-content;
-}
-.text1 h2{
-    color: white;
-    font-size: 2rem;
-}
-.text1 h1{
-    margin-top: 50px;
-    font-size: 4rem;
-    color: orange;
-    display: flex;
-    margin-inline: auto;
-    margin-inline-start: 0;
-    overflow: hidden;
-    border-right: 1px solid;
-    white-space: nowrap;
-    animation: typing 2s steps(25) forwards, wavy 2.5s infinite alternate;
+.navbar a {
+  color: orange;
+  margin: 0 15px;
+  text-decoration: none;
+  transition: transform 0.8s;
 }
 
-@keyframes typing{
-    from{
-        width: 0;
-    }
-    to{
-        width: 100%;
-    }
-}
-@keyframes blink{
-    50%{
-        opacity: 0;
-    }
-}
-@keyframes wavy{
-    0%{transform: translateY(0);}
-    50%{transform: translateY(-15px);}
-    100%{transform: translateY(0);}
-}
-.todo{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-.todo h1{
-    color: orange;
-}
-.box{
-    margin-top: 20px;
-    padding-top: 50px;
-    width: 700px;
-    height: 200px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 50px;
-    box-shadow: 8px 8px 15px rgba(0,0,0,0.6);
-}
-.thoughts{
-    height: 50px;
-    width: 400px;
-    box-shadow: 8px 8px 15px rgba(0,0,0,0.6);
-    overflow: scroll;
-    margin-left: 80px;
-    border-radius: 1.5rem;
-}
-.Submit{
-    height: 55px;
-    width: 100px;
-    box-shadow: 8px 8px 15px rgba(0,0,0,0.6);
+.navbar a:hover {
+  text-decoration: underline;
+  transform: scale(1.5);
 }
 
-.Submit{
-    background: transparent;
-    position: relative;
-    padding: 5px 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 17px;
-    font-weight: 600;
-    text-decoration: none;
-    cursor: pointer;
-    border: 1px solid orange;
-    border-radius: 25px;
-    outline: none;
-    overflow: hidden;
-    color: orange;
-    transition: color 0.3s 0.1s ease-out;
-    text-align: center;
-  }
-  
-  .Submit span {
-    margin: 10px;
-  }
-  
-  .Submit::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    content: '';
-    border-radius: 50%;
-    display: block;
-    width: 20em;
-    height: 20em;
-    left: -5em;
-    text-align: center;
-    transition: box-shadow 0.5s ease-out;
-    z-index: -1;
-  }
-  
-  .Submit:hover {
-    color: #fff;
-    border: 1px solid orange;
-  }
-  .Submit:hover::before {
-    box-shadow: inset 0 0 0 10em orange;
-  }
-  /* From Uiverse.io by kennyotsu */ 
+.text1 {
+  margin: 100px 20px;
+  width: 100%;
+  max-width: 900px;
+  padding: 0 20px;
+}
+
+.text1 h2 {
+  color: white;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+.text1 h1 {
+  margin-top: 30px;
+  font-size: clamp(2rem, 6vw, 4rem);
+  color: orange;
+  display: flex;
+  margin-inline: auto;
+  margin-inline-start: 0;
+  overflow: hidden;
+  border-right: 1px solid;
+  white-space: nowrap;
+  animation: typing 2s steps(25) forwards, wavy 2.5s infinite alternate;
+}
+
+.todo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+.todo h1 {
+  color: orange;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  text-align: center;
+}
+
+.box {
+  margin-top: 20px;
+  padding: 20px;
+  width: 100%;
+  max-width: 700px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+  box-shadow: 8px 8px 15px rgba(0,0,0,0.6);
+}
+
+.thoughts {
+  height: 50px;
+  width: 100%;
+  margin-left: 10%;
+  max-width: 400px;
+  box-shadow: 8px 8px 15px rgba(0,0,0,0.6);
+  overflow: scroll;
+  border-radius: 1.5rem;
+  padding: 0 15px;
+}
+
+.Submit {
+  background: transparent;
+  position: relative;
+  padding: 5px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid orange;
+  border-radius: 25px;
+  outline: none;
+  overflow: hidden;
+  color: orange;
+  transition: color 0.3s 0.1s ease-out;
+  text-align: center;
+  width: 100%;
+  max-width: 100px;
+  height: 50px;
+}
+
+.Submit span {
+  margin: 10px;
+}
+
+.Submit::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  content: '';
+  border-radius: 50%;
+  display: block;
+  width: 20em;
+  height: 20em;
+  left: -5em;
+  text-align: center;
+  transition: box-shadow 0.5s ease-out;
+  z-index: -1;
+}
+
+.Submit:hover {
+  color: #fff;
+  border: 1px solid orange;
+}
+
+.Submit:hover::before {
+  box-shadow: inset 0 0 0 10em orange;
+}
+
 .container {
-    width: 100%;
-    height: 100%;
-    /* Add your background pattern here */
-    background-color: #313131;
-    background-image: radial-gradient(rgba(255, 255, 255, 0.171) 2px, transparent 0);
-    background-size: 30px 30px;
-    background-position: -5px -5px
-  }
+  width: 100%;
+  height: 100%;
+  background-color: #313131;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.171) 2px, transparent 0);
+  background-size: 30px 30px;
+  background-position: -5px -5px;
+}
 
-  .bottom{
-    margin-top: 100px;
-    background-color: #444;
-    height: 100px;
-    width: 1800px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-  }
+.bottom {
+  
+  margin-top: 100px;
+  background-color: #444;
+  min-height: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+}
 
-  .bottom h2{
-    font-size: 1.1rem;
+.bottom h2 {
+  font-size: clamp(0.9rem, 3vw, 1.1rem);
+  color: white;
+}
+
+.bottom p {
+  color: orange;
+}
+
+/* Animations */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+@keyframes wavy {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .text1 {
+      margin: 50px 20px;
   }
+  
+  .box {
+      padding: 15px;
+  }
+  
+  .navbar {
+      padding: 5px;
+  }
+  
+  .navbar a {
+      margin: 0 10px;
+      font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .text1 {
+      margin: 30px 15px;
+  }
+  
+  .box {
+      padding: 10px;
+  }
+  
+  .thoughts {
+      height: 40px;
+  }
+  
+  .Submit {
+      font-size: 15px;
+  }
+}
